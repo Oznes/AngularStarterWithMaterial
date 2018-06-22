@@ -1,0 +1,83 @@
+
+
+
+<mat-card>
+    <h1>Book your next transit</h1>
+  <!--Name-->
+  <h1>Personal Info</h1>
+  <p>
+     <mat-form-field matTooltip="Enter all your names" appearance="outline">
+       <mat-label>Enter your Name</mat-label>
+        <input matInput placeholder="Name" type="text" [(ngModel)]="name">
+    
+       <mat-hint>...</mat-hint>
+     </mat-form-field>
+     </p>
+     <p>
+    <!--Surname-->
+    <mat-form-field matTooltip="Enter your surname" appearance="outline">
+        <mat-label>Enter your surname</mat-label>
+         <input matInput placeholder="Surname" type="text" [(ngModel)]="surname">
+     
+        <mat-hint>...</mat-hint>
+      </mat-form-field>
+    
+      
+       </p>
+       <!--Email-->
+       <p>
+           <mat-form-field matTooltip="Enter your email" appearance="outline">
+             <mat-label>Enter your Email</mat-label>
+              <input matInput placeholder="Enter Email" type="email" [(ngModel)]="email">
+          
+             <mat-hint>.....</mat-hint>
+           </mat-form-field>
+           </p>
+                <!--Age-->
+           <p>
+              <mat-form-field   matTooltip="How old are you" appearance="outline">
+                <mat-label>Enter your Age</mat-label>
+                 <input type="number" matInput placeholder="Enter Age" type="email" [(ngModel)]="Age">
+             
+                <mat-hint>Just your age</mat-hint>
+              </mat-form-field>
+              </p>
+
+           <h1>Select your date</h1>
+           <!--Date-->
+           <p>
+               <mat-form-field  matTooltip="Enter the date which you would love to travel by"  appearance="outline">
+                 <mat-label>Date</mat-label>
+                  <input matInput placeholder="Date to travel by" type="date" [(ngModel)]="date">
+                         
+                 <mat-hint>.....</mat-hint>
+               </mat-form-field>
+               </p>
+               
+     
+           
+       <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+           <mat-button-toggle
+           matTooltip="Click to close this login component"
+          aria-label="Button that displays a tooltip when focused or hovered over"
+          (click)="onCancel()"
+           >Cancel
+           </mat-button-toggle>
+           <mat-button-toggle 
+           matTooltip="Click to clear everything"
+           aria-label="Button that displays a tooltip when focused or hovered over"
+           (click)="onClear()"
+           >Clear</mat-button-toggle>
+
+
+
+           
+           <mat-button-toggle 
+           (click)="onLogin()"
+           type="submit"
+           matTooltip="Click to submit when you done registering"
+           aria-label="Button that displays a tooltip when focused or hovered over"
+           >Submit</mat-button-toggle>
+         </mat-button-toggle-group>
+</mat-card>
+

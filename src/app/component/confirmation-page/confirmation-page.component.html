@@ -1,0 +1,53 @@
+   
+<mat-card>
+        <mat-card-title>Thank you  {{name}} <span> for registering with us</span> <br/> </mat-card-title>
+        <img mat-card-image src="https://cdn2.iconfinder.com/data/icons/minimal-set-three/32/minimal-57-512.png" 
+        style="width: 15vw; align-self: center;
+        border: 3px solid black; border-radius: 50px; ">
+    
+    
+   
+    
+    
+    <mat-accordion>
+            <mat-expansion-panel>
+             
+              <mat-form-field>
+                <input matInput placeholder="First name">
+              </mat-form-field>
+          
+              <mat-form-field>
+                <input matInput placeholder="Age">
+              </mat-form-field>
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                        to check if all your data is correct... Click Here
+                </mat-panel-title>
+                <mat-panel-description>
+                   {{panelOpenState ? 'open' : 'closed'}}! Click to {{panelOpenState ? 'open' : 'closed'}}
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>  <br/><span>Your fool names are : </span> {{name}}
+                {{surname}} 
+                <span> , You are   </span>{{Age}}<span>  old</span><br/>
+                <span> and you will ldepart on this date {{date}}</span>
+                <span>check you email for further information : </span> {{email}} <br/>
+            </p>
+            <mat-action-row>
+                    <button mat-button color="warn" routerLink="order" (click)="prevStep()">Not Correct</button>
+                    <button mat-button color="primary" (click)="nextStep()">Correct</button>
+                  </mat-action-row>
+            </mat-expansion-panel>
+          </mat-accordion>
+
+
+
+
+
+          
+          
+
+</mat-card>

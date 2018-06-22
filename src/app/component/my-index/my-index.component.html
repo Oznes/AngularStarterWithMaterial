@@ -1,0 +1,37 @@
+
+  
+  <img src="http://girlgotfaith.com/wp-content/uploads/2015/10/wp-cloudy-simple.png" style="width: 100%;">
+  <mat-drawer-container class="example-container" autosize>
+   
+      <mat-drawer #drawer class="example-sidenav" mode="side">
+          <p>Auto-resizing sidenav</p>
+          <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+          <button (click)="showFiller = !showFiller" mat-raised-button>
+            Toggle extra text
+          </button>
+        </mat-drawer>
+      <div class="content">
+        <h1>Get There Sound Online Booking</h1>
+        <p>just click explore to go on to the booking page</p>
+        <!-- Use a button to pause/play the video with JavaScript -->
+        <button mat-raised-button routerLink="order" id="myBtn" onclick="myFunction()">Explore</button>
+       
+    <div class="example-sidenav-content">
+
+     
+      
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Explore via side nav
+      </button>
+      
+      </div>
+    </div>
+    <mat-icon svgIcon="thumbs-up"></mat-icon>
+
+  </mat-drawer-container>
+  
+
+
+
+
+  
